@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>消防設備点検</title>
+  <link rel="manifest" href="manifest.json" />
+</head>
+<body>
+  <h1>消防設備点検</h1>
+
+  <input type="text" id="siteName" placeholder="物件名" />
+
+  <select id="equipment">
+    <option value="消火器">消火器</option>
+    <option value="自火報">自動火災報知設備</option>
+    <option value="誘導灯">誘導灯</option>
+  </select>
+
+  <div>
+    <label><input type="radio" name="result" value="良" checked /> 良</label>
+    <label><input type="radio" name="result" value="不良" /> 不良</label>
+  </div>
+
+  <div id="checklist"></div>
+
+  <input type="number" id="manufactureYear" placeholder="製造年（例：2018）" />
+
+  <textarea id="memo" placeholder="不良内容・備考"></textarea>
+
+  <input
+    type="file"
+    id="photo"
+    accept="image/*"
+    capture="environment"
+  />
+
+  <button id="saveBtn">保存</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
